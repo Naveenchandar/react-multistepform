@@ -109,7 +109,7 @@ function StepTwo() {
     }, [])
     return (
         <div>
-            <span style={{ color: 'red' }}>{ErrStep1Values ? ErrStep1Values : ''}</span>
+            {ErrStep1Values ? <span style={{ color: 'red', marginLeft: '0px' }}>{ErrStep1Values}</span> : <span style={{ visibility: 'hidden', marginLeft: '-57px' }}>Hidden</span>}
             <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
                 <Animated animationIn="fadeIn" animationInDelay={0.3} animationInDuration={0.8} isVisible={true}>
                     <Form onSubmit={handleStep2Submit} className="step1Form">
