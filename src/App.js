@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import Container from 'react-bootstrap/Container';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { useLocation } from 'react-router-dom'
 
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App" style={location.pathname === '/stepthree' ? {height:'400px'} : {height: '700px'}}>
+      <ScrollAnimation delay={1000}
+        animateIn='fadeInDown'
+        initiallyVisible={true}>
+        <h2 className="title"> CREATE NEW ACCOUNT</h2>
+      </ScrollAnimation>
+      <NavBar />
+    </Container>
   );
 }
 

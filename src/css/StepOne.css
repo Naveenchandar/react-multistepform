@@ -1,0 +1,89 @@
+.Step1Row {
+    padding-top: 60px;
+    padding-left: 30px;
+}
+.Step1Row label {
+    text-align: right;
+}
+
+.step1Form {
+    border-bottom: 1px solid #ebebeb;
+    padding-right: 110px;
+}
+
+.fullName, .phoneNumber {
+    box-sizing: border-box;
+    background: transparent;
+    font-size: 14px;
+    padding: 15px 20px;
+    border: 1px solid #ebebeb;
+    font-family: 'Roboto Slab';
+    border-radius: 5px;
+    display: block;
+    width: 345px;
+    margin-right: 20px;
+    font-weight: bold;
+    outline: none;
+}
+.actions ul li a {
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    background: #1abc9c;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#group1{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: -60px;
+    padding-left: 0px;
+}
+#group1 li label{
+    padding-left: 10px;
+}
+
+.hrline{
+    position: relative;
+    left: 0px;
+    width: calc(100% + 109px);
+    border: 1px solid #f2f2f2;
+}
+.genderErr{
+    margin-bottom: 0;
+}
+.step1selecttag{
+    width: 175px;
+    margin-left: -80px;
+}
+
+input[type='radio'] {
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    border:1px solid darkgray;
+    border-radius:50%;
+    outline:none;
+    box-shadow:0 0 5px 0px gray inset;
+  }
+  
+  input[type='radio']:before {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin: 20% auto;    
+    border-radius:50%;    
+  }
+  input[type='radio']:checked:before {
+    background:#1abc9c;
+  }
+
+  #group1 li{
+      display: flex;
+  }
