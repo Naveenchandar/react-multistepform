@@ -16,7 +16,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 15px 0px;
-  padding-top: 35px;
+  padding: 15px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 

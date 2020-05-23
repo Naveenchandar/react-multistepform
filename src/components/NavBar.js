@@ -2,7 +2,7 @@ import React from 'react';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
 import StepThree from './StepThree'
-import { Route, NavLink, useLocation,Redirect } from 'react-router-dom';
+import { Route, NavLink, useLocation, Redirect } from 'react-router-dom';
 import '../css/NavBar.css'
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -27,10 +27,12 @@ function NavBar() {
                     </ul>
                 </ScrollAnimation>
             </nav>
-            <Redirect exact from="/" to="/stepone" />
             <Route exact path='/steptwo' component={StepTwo} />
             <Route exact path='/stepthree' component={StepThree} />
             <Route exact path='/stepone' component={StepOne} />
+            <Route exact path='/' component={StepOne}>
+                <Redirect exact from="/" to="/stepone" />
+            </Route>
         </div>
     )
 }
