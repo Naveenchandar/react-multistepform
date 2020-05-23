@@ -45,6 +45,7 @@ function StepThree() {
                         setSuccessPage(true)/* If values is correct pass true to open success page */
                     } else {
                         setErrValue('Incorrect Please try again.')
+                        document.getElementById('value').focus();
                     }
                 }
             }
