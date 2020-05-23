@@ -56,18 +56,22 @@ function StepTwo() {
         }
         if (!CompanyName) {
             setErrCompanyName('Please enter company name');
+            document.getElementById('CompanyName').focus();
             return false;
         }
         if (!Email) {
             setErrEmail('Please enter Email Id');
+            document.getElementById('Email').focus();
             return false;
         }
         if (!JobTitle) {
             setErrJobTitle('Please enter job title');
+            document.getElementById('JobTile').focus();
             return false;
         }
         if (!YearsOfExp) {
             setErrYearsOfExp('Please enter Years Of Experience');
+            document.getElementById('YearsOfExp').focus();
             return false;
         }
         if (!TermsAndCond) {
