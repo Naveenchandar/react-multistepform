@@ -109,7 +109,7 @@ function StepTwo() {
     }, [])
     return (
         <div>
-            <p style={{ color: 'red' }}>{ErrStep1Values ? ErrStep1Values : ''}</p>
+            <span style={{ color: 'red' }}>{ErrStep1Values ? ErrStep1Values : ''}</span>
             <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
                 <Animated animationIn="fadeIn" animationInDelay={0.3} animationInDuration={0.8} isVisible={true}>
                     <Form onSubmit={handleStep2Submit} className="step1Form">
@@ -119,14 +119,14 @@ function StepTwo() {
                                 <Form.Group as={Row}>
                                     <Form.Label column sm="5">Company Name</Form.Label>
                                     <Col sm="7">
-                                        <Form.Control type="text" placeholder="Enter Compay Name" name="CompanyName" className="CompanyName" id="CompanyName" autoFocus value={CompanyName} onChange={handleCompanyChange} />
+                                        <Form.Control type="text" placeholder="Enter Compay Name" className="CompanyName" id="CompanyName" autoFocus value={CompanyName || ''} onChange={handleCompanyChange} />
                                         {errCompanyName ? <span style={{ color: 'red', marginLeft: '-30px' }}>{!CompanyName ? errCompanyName : ''}</span> : <span style={{ visibility: 'hidden', marginLeft: '-57px' }}>Hidden</span>}
                                     </Col>
                                 </Form.Group>
                                 <Form.Group as={Row}>
                                     <Form.Label column sm="5">Email</Form.Label>
                                     <Col sm="7">
-                                        <Form.Control type="email" placeholder="Enter Email Id" name="Email" className="Email" id="Email" value={Email} onChange={handleEmailChange} />
+                                        <Form.Control type="email" placeholder="Enter Email Id" name="Email" className="Email" id="Email" value={Email || ''} onChange={handleEmailChange} />
                                         {errEmail ? <span style={{ color: 'red', marginLeft: '-57px' }}>{!Email ? errEmail : ''}</span> : <span style={{ visibility: 'hidden', marginLeft: '-57px' }}>Hidden</span>}
                                     </Col>
                                 </Form.Group>
@@ -134,14 +134,14 @@ function StepTwo() {
                                 <Form.Group as={Row}>
                                     <Form.Label column sm="5">Job Title</Form.Label>
                                     <Col sm="7">
-                                        <Form.Control type="text" placeholder="Job Title" name="JobTitle" className="JobTitle" id="JobTile" onKeyPress={onKeyPress} value={JobTitle} onChange={handleJobTitleChange} />
+                                        <Form.Control type="text" placeholder="Job Title" name="JobTitle" className="JobTitle" id="JobTile" onKeyPress={onKeyPress} value={JobTitle || ''} onChange={handleJobTitleChange} />
                                         {errJobTitle ? <span style={{ color: 'red', marginLeft: '-57px' }}>{!JobTitle ? errJobTitle : ''}</span> : <span style={{ visibility: 'hidden', marginLeft: '-57px' }}>Hidden</span>}
                                     </Col>
                                 </Form.Group>
                                 <Form.Group as={Row}>
                                     <Form.Label column sm="5">Years Of Experience</Form.Label>
                                     <Col sm="7">
-                                        <Form.Control type="number" placeholder="Years Of Experience" name="YearsOfExp" className="YearsOfExp" id="YearsOfExp" value={YearsOfExp} onChange={handleYearsOfExpChange} />
+                                        <Form.Control type="number" placeholder="Years Of Experience" name="YearsOfExp" className="YearsOfExp" id="YearsOfExp" value={YearsOfExp || ''} onChange={handleYearsOfExpChange} />
                                         {errYearsOfExp ? <span style={{ color: 'red', marginLeft: '-10px' }}>{!YearsOfExp ? errYearsOfExp : ''}</span> : <span style={{ visibility: 'hidden', marginLeft: '-57px' }}>Hidden</span>}
                                     </Col>
                                 </Form.Group>
