@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom'
 function App() {
   const location = useLocation();
   return (
-    <Container className="App" style={location.pathname === '/stepthree' ? {height:'400px'} : {height: '700px'}}>
+    <Container className="App" style={location.pathname === '/stepthree' ? {height:'400px'} : {height: '666px'}}>
       <ScrollAnimation delay={1000}
         animateIn='fadeInDown'
         initiallyVisible={true}>

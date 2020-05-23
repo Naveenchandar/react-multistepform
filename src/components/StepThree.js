@@ -32,7 +32,7 @@ function StepThree() {
         e.preventDefault();/* prevents page loading */
         /* Check whether first two pages has been filled */
         if (!JSON.parse(localStorage.getItem('mycred'))) {
-            setErrStepValues('Please fill step 1 and step 2 values first')
+            setErrStepValues('Please fill personal details and company details.')
         } else {
             const stepvalues = JSON.parse(localStorage.getItem('mycred'));
             if (!stepvalues.FullName && !stepvalues.PhoneNumber) {

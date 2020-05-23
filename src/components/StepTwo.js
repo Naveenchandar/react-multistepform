@@ -81,7 +81,7 @@ function StepTwo() {
         e.preventDefault();/* prevents page loading */
         const step1values = JSON.parse(localStorage.getItem('mycred'));
         if (!step1values) {
-            setErrStep1Values('Please fill step 1 values first.');
+            setErrStep1Values('Please fill personal details.');
         } else {
             if (validateFields()) {
                 /* Storing the items in localstorage */
